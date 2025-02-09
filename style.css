@@ -83,9 +83,6 @@ h1 {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     margin-right: 100px; /* Move a imagem para a esquerda */
-    max-width: 90%;
-    display: block;
-    margin: 0 auto;
   }
 
   .foto-grande:hover {
@@ -123,7 +120,7 @@ p {
   }
   
   .button-container {
-    position: fixed;
+    position: absolute;
     bottom: 20px;
     right: 20px;
   }
@@ -168,15 +165,14 @@ p {
     justify-content: center;
     flex-direction: column;
     gap: 5vh;
-    width: 100%;
+    width: 50%;
     height: 100%;
 }
 
 .right-side h1 {
     color: #fff;
     font-size: 5vw;
-    text-align: center;
-    width: 100%;
+
 }
 
 .right-side p {
@@ -218,43 +214,10 @@ p {
 img {
     max-width: 100%;
     height: auto;
+    margin-right: 20px;
 }
 
 .gallery-item a {
     font-size: 16px;
     padding: 12px 24px;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto; /* Centraliza o container */
-  }
-  
-  .content {
-    margin: 2rem; /* Utiliza rem para uma margem relativa */
-  }
-  
-  @media (max-width: 768px) {
-    .content {
-      margin: 1rem; /* Reduz a margem para telas menores */
-    }
-  }
-
-  @media (max-width: 768px) {
-    .foto-grande {
-        max-width: 100%;
-    }
-}
-
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .right-side {
-        width: 100%;
-        padding: 10px;
-    }
 }
