@@ -221,3 +221,47 @@ img {
     font-size: 16px;
     padding: 12px 24px;
 }
+
+@media (max-width: 768px) {
+    .container {
+      flex-direction: column; /* Empilha os elementos em telas menores */
+      align-items: center;
+    }
+    .image {
+      width: 100%; /* A imagem ocupa toda a largura da tela */
+    }
+    .text {
+        font-size: 3rem; /* Aumenta o tamanho da fonte para telas menores */
+    text-align: center;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    /* Estilos para telas menores (ex: smartphones) */
+    .right-side {
+        width: 100%; 
+        text-align: center; /* Centraliza o texto horizontalmente */
+        padding: 10 20px;
+      }
+
+    .right-side h1 {
+      font-size: 10vw; /* Ajuste o tamanho da fonte conforme necessário */
+      padding: 10 20px;
+      text-align: center;
+      margin: 0 auto;
+    }
+  
+    .right-side p {
+      font-size: 5vw; /* Ajuste o tamanho da fonte conforme necessário */
+      padding: 10 20px;
+    }
+
+    .button {
+        font-size: 0.8rem;
+        padding: 0px 20px;
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+
+      }
+  }
