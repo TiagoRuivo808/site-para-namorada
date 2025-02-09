@@ -11,7 +11,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     text-align: center;
     background-image: linear-gradient(to right, #f680e0, #f6a43f);
 }
@@ -195,13 +196,29 @@ p {
     }
 }
 
+
 @media (max-width: 768px) {
-    /* Estilos para telas com largura máxima de 768px */
-    .container {
-      width: 90%;
+    h1 {
+        font-size: 2em;
     }
-    .navbar {
-      flex-direction: column;
+    p {
+        font-size: 14px;
     }
-  }
+}
+
+@media (max-width: 600px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.gallery-item a {
+    font-size: 16px;
+    padding: 12px 24px;
+}
   
