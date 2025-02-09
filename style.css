@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background-image: linear-gradient(to right, #f680e0, #f6a43f);
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: black;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.gallery-item img {
+    width: 250px;
+    height: 333.33px;
+    object-fit: cover;
+    object-position: center; /* Centraliza a imagem dentro do container */
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+}
+
+/* Animação de fade-in */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.gallery-item a {
+    display: inline-block;
+  padding: 10px 20px;
+  background-color: #f0f0f0;
+  border: 2px solid #ccc; /* Adiciona a borda */
+  border-radius: 15px;
+  text-decoration: none;
+  color: #333;
+  transition: all 0.3s ease-in-out; /* Adiciona transição para o efeito hover */
+  background: linear-gradient(to bottom, #f0f0f0, #ddd);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item a:hover {
+    background-color: #fd86d1;
+  border-color: #050505;
+  background: linear-gradient(to bottom, #fd86d1, #f0f0f0);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.foto-grande {
+    width: 500px;
+    height: auto;
+    margin-bottom: 20px; /* Adiciona uma margem inferior para criar espaço entre a imagem e o texto */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-right: 100px; /* Move a imagem para a esquerda */
+  }
+
+  .foto-grande:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+p {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: black;
+    text-align: center;
+    margin-top: 20px;
+    line-height: 1.5;
+  }
+
+  .btn {
+    display: inline-block;
+  padding: 10px 20px;
+  background-color: #f0f0f0;
+  border: 2px solid #ccc; /* Adiciona a borda */
+  border-radius: 15px;
+  text-decoration: none;
+  color: #333;
+  transition: all 0.3s ease-in-out; /* Adiciona transição para o efeito hover */
+  background: linear-gradient(to bottom, #f0f0f0, #ddd);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .btn:hover {
+    background-color: #fd86d1;
+  border-color: #050505;
+  background: linear-gradient(to bottom, #fd86d1, #f0f0f0);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .button-container {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .balloon-container {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 100; /* Ajuste o valor se necessário */
+}
+
+.balloon {
+    position: absolute;
+    width: 300px;
+    height: 70px;
+    background-image: url('assets/baloons.jpeg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 50% 50% 20% 50%;
+    animation: float 5s linear forwards;
+    opacity: 0;
+    top: auto;
+    bottom: 0;
+}
+
+.elemento {
+    width: 800px; /* Ou use porcentagem ou vw/vh */
+    height: 400px; /* Ou use porcentagem ou vw/vh */
+    background-image: url('assets/baloons.jpeg');
+    background-size: contain; /* Ou cover, ou um tamanho específico */
+    background-position: center; /* Ou outra posição */
+    background-repeat: no-repeat; /* Evita repetição */
+}
+
+.right-side {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5vh;
+    width: 50%;
+    height: 100%;
+}
+
+.right-side h1 {
+    color: #fff;
+    font-size: 5vw;
+    text-align: center;
+}
+
+.right-side p {
+    color: #fff;
+    font-size: 1vw;
+    width: 80%;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    50% { /* Ajuste esse valor para controlar a altura máxima */
+        transform: translateY(-80vh) rotate(360deg); /* Balão sobe até 80% da tela */
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) rotate(720deg); /* Balão sobe até o topo da tela */
+        opacity: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Estilos para telas com largura máxima de 768px */
+    .container {
+      width: 90%;
+    }
+    .navbar {
+      flex-direction: column;
+    }
+  }
+  
